@@ -20,7 +20,7 @@
 #include "nodes/bitmapset.hpp"
 #include "nodes/pg_list.hpp"
 
-namespace duckdb_libpgquery {
+namespace hiqe_libpgquery {
 
 /* ----------------------------------------------------------------
  *						node definitions
@@ -1356,6 +1356,37 @@ typedef struct PGJoinExpr {
 	int rtindex;         /* RT index assigned for join, or 0 */
 	int location;          /* token location, or -1 if unknown */
 } PGJoinExpr;
+
+
+/*---------------
+ * PGFlattenExpr
+ *
+ *
+ *----------------
+ */
+
+typedef struct PGFlattenExpr {
+	PGNodeTag type;
+	PGJoinType jointype;
+	PGJoinRefType joinreftype;
+	PGNode *flattenarg;
+	PGList *orderedflattencolumns;
+	PGAlias *alias; // only alias name --ok, also fine when specify related columns.
+} PGFlattenExpr;
+
+
+/*---------------
+ * PGAlignExpr
+ *
+ *
+ *----------------
+ */
+typedef struct PGAlignExpr {
+	PGNodeTag type;
+	PGNode *alignarg;
+	PGList *orderedaligncolumns;
+	PGAlias *alias;
+} PGAlignExpr;
 
 /*----------
  * PGFromExpr - represents a FROM ... WHERE ... construct

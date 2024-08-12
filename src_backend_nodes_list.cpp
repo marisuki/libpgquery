@@ -36,7 +36,7 @@
 #include "nodes/pg_list.hpp"
 
 
-namespace duckdb_libpgquery {
+namespace hiqe_libpgquery {
 
 /*
  * Routines to simplify writing assertions about the type of a list; a

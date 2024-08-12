@@ -15,7 +15,7 @@
 
 #include "nodes/parsenodes.hpp"
 
-namespace duckdb_libpgquery {
+namespace hiqe_libpgquery {
 
 PGAExpr *makeAExpr(PGAExpr_Kind kind, PGList *name, PGNode *lexpr, PGNode *rexpr, int location);
 

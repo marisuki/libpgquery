@@ -1,5 +1,5 @@
 
-namespace duckdb_libpgquery {
+namespace hiqe_libpgquery {
 #define PG_KEYWORD(a,b,c) {a,b,c},
 
 const PGScanKeyword ScanKeywords[] = {
@@ -486,4 +486,4 @@ PG_KEYWORD("zone", ZONE, UNRESERVED_KEYWORD)
 };
 
 const int NumScanKeywords = lengthof(ScanKeywords);
-} // namespace duckdb_libpgquery
+} // namespace hiqe_libpgquery

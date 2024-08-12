@@ -15,7 +15,7 @@
 
 #include "pg_definitions.hpp"
 
-namespace duckdb_libpgquery {
+namespace hiqe_libpgquery {
 
 /*
  * The first field of every node is NodeTag. Each node created (with makeNode)
@@ -190,6 +190,8 @@ typedef enum PGNodeTag {
 	T_PGTargetEntry,
 	T_PGRangeTblRef,
 	T_PGJoinExpr,
+	T_PGFlattenExpr,
+	T_PGTagAlignExpr,
 	T_PGFromExpr,
 	T_PGOnConflictExpr,
 	T_PGIntoClause,
